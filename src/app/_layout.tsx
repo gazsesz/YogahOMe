@@ -22,6 +22,8 @@ export default function RootLayout() {
         <Stack.Screen name="pose/[id]" options={{ title: 'Ászana' }} />
         <Stack.Screen name="new" options={{ title: 'Új óra' }} />
         <Stack.Screen name="generated" options={{ title: 'Neked összeállítva' }} />
+        <Stack.Screen name="profil" options={{ title: 'Profil és beállítások' }} />
+        <Stack.Screen name="practice/[id]" options={{ title: 'Gyakorlás' }} />
         <Stack.Screen name="nyilatkozat" options={{ title: 'Felelősségi nyilatkozat' }} />
         <Stack.Screen name="mudrak" options={{ title: 'Mudratár (haladó)' }} />
         <Stack.Screen name="plan/[id]" options={{ title: 'Óravázlat' }} />

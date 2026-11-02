@@ -1,5 +1,6 @@
+import { router } from 'expo-router';
 import { Tabs } from 'expo-router/js-tabs';
-import type { ColorValue } from 'react-native';
+import { Pressable, type ColorValue } from 'react-native';
 import Svg, { Circle, Line, Path } from 'react-native-svg';
 import { C } from '../../lib/theme';
 
@@ -33,6 +34,24 @@ function PlanIcon({ color }: { color: ColorValue }) {
   );
 }
 
+/** Profil ikon a fejlécben: alapbeállítások (szint, panaszok, hangok). */
+function ProfileButton() {
+  return (
+    <Pressable
+      onPress={() => router.push('/profil')}
+      hitSlop={10}
+      style={{ paddingHorizontal: 14 }}
+      accessibilityRole="button"
+      accessibilityLabel="Profil és beállítások"
+    >
+      <Svg width={26} height={26} viewBox="0 0 24 24">
+        <Circle cx={12} cy={8.5} r={3.6} stroke={C.accent} strokeWidth={2} fill="none" />
+        <Path d="M4.5 20c1.2-3.6 4-5.3 7.5-5.3s6.3 1.7 7.5 5.3" stroke={C.accent} strokeWidth={2} strokeLinecap="round" fill="none" />
+      </Svg>
+    </Pressable>
+  );
+}
+
 export default function TabsLayout() {
   return (
     <Tabs
@@ -41,6 +60,7 @@ export default function TabsLayout() {
         tabBarInactiveTintColor: C.muted,
         headerStyle: { backgroundColor: C.surface },
         headerTitleStyle: { color: C.ink },
+        headerRight: ProfileButton,
       }}
     >
       <Tabs.Screen name="index" options={{ title: 'Yoga hOMe', tabBarLabel: 'Főoldal', tabBarIcon: HomeIcon }} />

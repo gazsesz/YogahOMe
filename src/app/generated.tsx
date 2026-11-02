@@ -57,6 +57,10 @@ export default function Generated() {
     const p = await ensureSaved(v);
     router.push({ pathname: '/plan/[id]', params: { id: p.id } });
   };
+  const startPractice = async (v: number) => {
+    const p = await ensureSaved(v);
+    router.push({ pathname: '/practice/[id]', params: { id: p.id } });
+  };
   const toggleFavorite = async (v: number) => {
     const cur = saved[v] ?? variants[v];
     await ensureSaved(v, { favorite: !cur.favorite });
@@ -120,7 +124,10 @@ export default function Generated() {
               <Text style={{ fontWeight: '700' }}>Fő rész: </Text>
               {mainNames.join(' · ')}
             </Text>
-            <Button label={saved[v] ? 'Megnyitás' : 'Kiválasztás'} onPress={() => choose(v)} />
+            <View style={{ flexDirection: 'row', gap: 10 }}>
+              <Button label="▶  Indítás" onPress={() => startPractice(v)} style={{ flex: 1 }} />
+              <Button label={saved[v] ? 'Részletek' : 'Kiválasztás'} kind="secondary" onPress={() => choose(v)} style={{ flex: 1 }} />
+            </View>
           </View>
         );
       })}
@@ -148,7 +155,7 @@ export default function Generated() {
           ))}
         </>
       )}
-      <Text style={st.hint}>A kiválasztott óra elmentődik az óráid közé, és a szerkesztőben pózonként módosítható.</Text>
+      <Text style={st.hint}>Az elindított vagy kiválasztott óra elmentődik az óráid közé, és a részleteknél pózonként módosítható.</Text>
     </ScrollView>
   );
 }

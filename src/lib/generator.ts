@@ -132,7 +132,11 @@ function slotMinutes(p: Pose, phase: 'warm' | 'main' | 'cool'): number {
 }
 
 function holdFor(p: Pose, phase: 'warm' | 'main' | 'cool'): string {
-  if (p.category === 'yin' || p.category === 'pihen') return fmtMin(slotMinutes(p, phase));
+  if (p.category === 'yin' || p.category === 'pihen') {
+    // Oldalas pózoknál a keret a két oldalra együtt szól, ezért oldalanként a fele.
+    const m = slotMinutes(p, phase);
+    return isSidedPose(p) ? `${fmtMin(roundHalf(m / 2) || 0.5)} oldalanként` : fmtMin(m);
+  }
   const side = isSidedPose(p) ? ' oldalanként' : '';
   const breaths = phase === 'warm' ? Math.min(p.hold.breaths, 5) : p.hold.breaths;
   return breaths > 0 ? `${breaths} légzés${side}` : fmtMin(slotMinutes(p, phase));
@@ -313,7 +317,7 @@ export function estimateMinutes(plan: Plan): number {
   for (const s of plan.sections)
     for (const it of s.items) {
       const m = /^([\d,.]+) perc/.exec(it.hold);
-      if (m) t += Number(m[1].replace(',', '.'));
+      if (m) t += Number(m[1].replace(',', '.')) * (it.sides === 'mindket' && /oldalanként/.test(it.hold) ? 2 : 1);
       else if (it.kind === 'sequence') t += (it.reps ?? 1) * (it.sides === 'mindket' ? 2 : 1);
       else t += (it.sides === 'mindket' ? 1.5 : 1) * (it.reps ?? 1);
     }

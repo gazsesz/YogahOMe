@@ -3,6 +3,7 @@ import { router, Stack, useFocusEffect, useLocalSearchParams } from 'expo-router
 import * as Sharing from 'expo-sharing';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { AudioToggles } from '../../components/AudioToggles';
 import { BalanceBars } from '../../components/BalanceBars';
 import { PracticeThumb } from '../../components/PracticeRow';
 import { Button, Chip, SectionTitle, Tag } from '../../components/ui';
@@ -13,6 +14,8 @@ import { CHAKRA_BY_ID, DATA, ELEMENT_BY_ID, hasSides, itemKind, KINDS, practiceO
 import { getPlan, savePlan, useDb } from '../../lib/store';
 import { toggle } from '../../lib/filters';
 import { planHtml } from '../../lib/pdf';
+import { effectiveAudio, hasOverride } from '../../lib/profile';
+import { useProfile } from '../../lib/useProfile';
 import { move, newId, poseCount, updateSection } from '../../lib/plan';
 import { C, WIDE } from '../../lib/theme';
 import type { Plan, PlanItem, Sides } from '../../lib/types';
@@ -56,6 +59,7 @@ export default function PlanEditor() {
   const [missing, setMissing] = useState(false);
   const [tagsText, setTagsText] = useState('');
   const [showBalance, setShowBalance] = useState(false);
+  const { profile } = useProfile();
 
   // Fókuszba kerüléskor újratöltjük, mert a választó képernyő közvetlenül az adatbázisba ír.
   useFocusEffect(
@@ -130,6 +134,12 @@ export default function PlanEditor() {
         }}
       />
 
+      <Button
+        label="▶  Gyakorlás indítása"
+        onPress={() => router.push({ pathname: '/practice/[id]', params: { id: plan.id } })}
+        disabled={!plan.sections.some((x) => x.items.length)}
+        style={{ marginBottom: 14 }}
+      />
       <TextInput
         style={st.titleInput}
         value={plan.title}
@@ -164,6 +174,24 @@ export default function PlanEditor() {
           placeholderTextColor={C.muted}
         />
         <Text style={st.muted}> perc</Text>
+      </View>
+
+      <SectionTitle>Gyakorlás közben</SectionTitle>
+      <View style={st.audioCard}>
+        <AudioToggles
+          value={effectiveAudio(plan, profile)}
+          onChange={(patch) => update((p) => ({ ...p, practice: { ...p.practice, ...patch } }))}
+        />
+        <View style={st.audioFoot}>
+          <Text style={[st.muted, { flex: 1 }]}>
+            {hasOverride(plan) ? 'Ennél az óránál saját beállítás van.' : 'A profilod alapbeállítása szerint.'}
+          </Text>
+          {hasOverride(plan) && (
+            <Pressable onPress={() => update((p) => ({ ...p, practice: undefined }))} hitSlop={8}>
+              <Text style={st.reset}>Profil szerint</Text>
+            </Pressable>
+          )}
+        </View>
       </View>
 
       <SectionTitle>Címkék</SectionTitle>
@@ -369,6 +397,9 @@ function IconBtn({ label, onPress }: { label: string; onPress: () => void }) {
 }
 
 const st = StyleSheet.create({
+  audioCard: { backgroundColor: C.surface, borderRadius: 14, borderWidth: 1, borderColor: C.line, paddingHorizontal: 12, paddingTop: 2, paddingBottom: 10 },
+  audioFoot: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 8 },
+  reset: { color: C.accent, fontWeight: '700', fontSize: 14 },
   content: { padding: 16, paddingBottom: 48 },
   advToggle: { color: C.muted, fontWeight: '600', fontSize: 14, marginTop: 18, paddingVertical: 6 },
   headerStar: { fontSize: 24, color: C.muted },
