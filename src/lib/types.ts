@@ -191,6 +191,8 @@ export interface Plan {
   favorite?: boolean;
   /** Ha az órát a generátor készítette: a kérés (cél, idő, szint, kímélendő területek) és a változat. */
   generator?: { goal: string; option?: string; minutes: number; level: 1 | 2 | 3; avoid: string[]; variant: number };
+  /** Az óra saját hangbeállítása gyakorláskor; hiányzó érték = a profil alapértéke. */
+  practice?: { narration?: boolean; sounds?: boolean };
   createdAt: string;
   updatedAt: string;
 }

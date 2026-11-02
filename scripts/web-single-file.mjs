@@ -13,10 +13,11 @@ let html = readFileSync(join(dist, 'index.html'), 'utf8');
 const scriptRe = /<script src="([^"]+)" defer><\/script>/g;
 html = html.replace(scriptRe, (_, src) => {
   let js = readFileSync(join(dist, src), 'utf8');
-  // képek (pl. a fejléc vissza-nyila) data URI-ként
-  js = js.replace(/"(\/assets\/[^"]+\.png)"/g, (m, p) => {
+  // képek (pl. a fejléc vissza-nyila) és hangjelzések data URI-ként
+  js = js.replace(/"(\/assets\/[^"]+\.(png|wav))"/g, (m, p, ext) => {
     try {
-      return JSON.stringify('data:image/png;base64,' + readFileSync(join(dist, p)).toString('base64'));
+      const mime = ext === 'wav' ? 'audio/wav' : 'image/png';
+      return JSON.stringify(`data:${mime};base64,` + readFileSync(join(dist, p)).toString('base64'));
     } catch {
       return m;
     }

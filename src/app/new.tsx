@@ -1,5 +1,5 @@
 import { router } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Chip, SectionTitle } from '../components/ui';
 import { CONDITION_BY_ID } from '../lib/cautions';
@@ -7,6 +7,7 @@ import { phaseMinutes } from '../lib/generator';
 import { AVOID_OPTIONS, DURATIONS, GOAL_BY_ID, GOALS } from '../lib/goals';
 import { toggle } from '../lib/filters';
 import { C, WIDE } from '../lib/theme';
+import { useProfile } from '../lib/useProfile';
 
 const LEVELS: [1 | 2 | 3, string][] = [
   [1, 'Kezdő'],
@@ -21,6 +22,16 @@ export default function NewClass() {
   const [minutes, setMinutes] = useState(20);
   const [level, setLevel] = useState<1 | 2 | 3>(1);
   const [avoid, setAvoid] = useState<string[]>([]);
+  // A profil (szint, krónikus panaszok) adja a kiinduló értékeket; óránként módosíthatók.
+  const { profile, loaded } = useProfile();
+  const applied = useRef(false);
+  useEffect(() => {
+    if (!loaded || applied.current) return;
+    applied.current = true;
+    setLevel(profile.level);
+    setAvoid(profile.conditions);
+  }, [loaded, profile]);
+  const avoidOptions = [...AVOID_OPTIONS, ...profile.conditions.filter((c) => !AVOID_OPTIONS.includes(c))];
   const goal = GOAL_BY_ID[goalId];
   const max = goal.maxMinutes ?? 999;
   const mins = Math.min(minutes, max);
@@ -93,11 +104,14 @@ export default function NewClass() {
 
         <SectionTitle>Kímélendő területek</SectionTitle>
         <View style={st.wrap}>
-          {AVOID_OPTIONS.map((id) => (
+          {avoidOptions.map((id) => (
             <Chip key={id} label={CONDITION_BY_ID[id].name} active={avoid.includes(id)} onPress={() => setAvoid(toggle(avoid, id))} />
           ))}
         </View>
-        <Text style={st.desc}>Azok a gyakorlatok, amelyeknél ezekre a területekre ellenjavallat van, kimaradnak.</Text>
+        <Text style={st.desc}>
+          Azok a gyakorlatok, amelyeknél ezekre a területekre ellenjavallat van, kimaradnak.
+          {profile.conditions.length ? ' A profilodban megadott panaszok alapból be vannak jelölve.' : ''}
+        </Text>
       </ScrollView>
       <View style={st.footer}>
         <Button label="Órák generálása" onPress={generate} style={[{ flex: 1 }, WIDE]} />

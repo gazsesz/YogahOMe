@@ -126,9 +126,14 @@ export default function Home() {
         <Text style={st.empty}>Itt jelennek meg az óráid. Kezdd az „Új óra” gombbal.</Text>
       )}
 
-      <Pressable onPress={() => router.push('/nyilatkozat')} hitSlop={8} style={{ marginTop: 28 }} accessibilityRole="link">
-        <Text style={st.legal}>Felelősségi nyilatkozat</Text>
-      </Pressable>
+      <View style={{ flexDirection: 'row', gap: 20, marginTop: 28 }}>
+        <Pressable onPress={() => router.push('/profil')} hitSlop={8} accessibilityRole="link">
+          <Text style={st.legal}>Profil és beállítások</Text>
+        </Pressable>
+        <Pressable onPress={() => router.push('/nyilatkozat')} hitSlop={8} accessibilityRole="link">
+          <Text style={st.legal}>Felelősségi nyilatkozat</Text>
+        </Pressable>
+      </View>
     </ScrollView>
   );
 }

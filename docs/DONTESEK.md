@@ -5,6 +5,24 @@ A legfrissebb lépés van legfelül.
 
 ---
 
+## Yoga hOMe 4. lépés – Gyakorlás mód, profil és beállítások (2026-11-02)
+
+**Gabor kérése:** gyakorlás mód hangjelzéssel és magyar narrációval, mindkettő kikapcsolható; legyen alapprofil
+(szint, krónikus betegségek, a narráció és a hangjelzés alapértéke), amit az egyes óráknál felül lehet bírálni,
+és az óra megjegyzi a saját beállítását.
+
+| Döntés | Miért |
+| --- | --- |
+| **Profil és beállítások** képernyő (fejléc jobb felső ikonja, főoldal alja): szint, krónikus betegség / tartós panasz (a meglévő panaszlista a menstruáció nélkül), narráció és hangjelzés alapértéke, narráció kipróbálása. Mentés: `settings` tábla, kulcs `profile:v1` | Egy helyen az alapok; a meglévő tárolót használja, nem kell sémamódosítás. |
+| Új óránál a szint és a kímélendő területek a profilból töltődnek elő, de óránként átállíthatók | Ne kelljen minden alkalommal újra megadni a krónikus panaszt. |
+| Óránkénti felülbírálás: `Plan.practice = { narration?, sounds? }`; hiányzó érték = a profil alapértéke. Állítható a szerkesztőben („Gyakorlás közben”) és gyakorlás közben is; „Profil szerint” visszaállít | Gabor kérése: az óra megjegyzi a saját beállítását, de a profil változása a többi órát követi. |
+| **Gyakorlás mód** (`/practice/[id]`): lépés = egy póz egy oldalon egy ismétlésben; kör alakú időzítő, figura, következő gyakorlat, előző / szünet / következő gomb; a kijelző nem alszik el | A Tanítás-design alapján, otthoni gyakorlásra egyszerűsítve. |
+| Időzítés: „X perc” pontosan; légzésszámnál 6 mp/légzés + 10 mp helyezkedés, de legalább 1 perc (oldalas póznál oldalanként 45 mp); sorozatnál 4 mp/lépés × kör | Így a gyakorlás hossza a választott időhöz igazodik (teszt: ±15%). A generátor yin/pihentető oldalas pózainál a tartás most „… oldalanként”, hogy egyértelmű legyen. |
+| Hangjelzés: gong szakaszváltáskor és az óra végén, halk csengő pózváltáskor; saját generált hangok (`scripts/hang/hangok.py` → `assets/sounds`), expo-audio, iOS-en a némító kapcsoló mellett is szól, a háttérzenét csak lehalkítja | Nincs licencgond, kicsi a fájl. |
+| Narráció: a telefon beépített felolvasója (expo-speech, `hu-HU`), kisegítő lehetőség nélkül. Szakaszváltáskor: „Vége: bemelegítés. Fő rész.”; póznál név, oldal, az első instrukció és a tartás; másik oldalnál „Másik oldal” | Ingyenes, offline. Ha nincs magyar hang az eszközön, a profil szól, hol tölthető le. Saját hangfelvétel vagy AI-hang később jöhet. |
+
+---
+
 ## Yoga hOMe 3. lépés – Pontosabb pózadatok, felelősségi nyilatkozat (2026-11-02)
 
 **Gabor kérése:** a pózadatok pontosítása; első indításkor jelenjen meg egy figyelmeztetés a saját felelősségről.
