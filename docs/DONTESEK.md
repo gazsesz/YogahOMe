@@ -5,6 +5,17 @@ A legfrissebb lépés van legfelül.
 
 ---
 
+## Yoga hOMe – Saját repó (2026-11-02)
+
+**Gabor kérése:** az app költözzön a saját `gazsesz/YogahOMe` repóba.
+
+| Döntés | Miért |
+| --- | --- |
+| A Mariann-jogapp `claude/project-thread-nkbmp7` ágának teljes előzménye a YogahOMe `main` ágára került | Megmarad, honnan indult és miért döntöttünk úgy, ahogy. |
+| A további fejlesztés itt folyik, ágakon és pull requesteken át; a Mariann-jogapp repó változatlan marad | A két app független. |
+
+---
+
 ## Yoga hOMe 2. lépés – Egyszerű főoldal és óragenerátor (2026-11-02)
 
 **Gabor kérése:** a kezdőoldal legyen nagyon egyszerű: Kedvencek; Új óra → szűrés → generálás,
