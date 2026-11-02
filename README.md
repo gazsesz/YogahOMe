@@ -38,6 +38,30 @@ npm run build:web
 node scripts/web-single-file.mjs dist dist/yogahome.html
 ```
 
+## Telepíthető Android app (APK)
+
+Gép nélkül, rendes appként futó változat. Ingyenes Expo-fiók kell hozzá (<https://expo.dev/signup>);
+a fordítást az Expo felhője végzi.
+
+1. A projekt mappájában (PowerShell):
+
+   ```
+   git pull
+   npm install
+   npx eas-cli login
+   npx eas-cli build --platform android --profile preview
+   ```
+
+   Az első futáskor rákérdez, hogy létrehozza-e a projektet az Expo-fiókodban, és hogy generáljon-e
+   aláíró kulcsot (Android Keystore): mindkettőre **Yes**. Ha közben az `app.json` módosul
+   (bekerül a projekt azonosítója), azt érdemes commitolni.
+2. Kb. 10–20 perc múlva a parancssor kiír egy linket és egy QR-kódot. Nyisd meg a telefonon, töltsd le az
+   `.apk` fájlt, és telepítsd. Ha a telefon kéri, engedélyezd a telepítést ismeretlen forrásból
+   (a böngészőnek vagy a Fájlok appnak).
+3. Új változatnál ugyanez a build parancs; az új APK a régi fölé települ, a mentett órák megmaradnak.
+
+A `production` profil a Google Play áruházba feltölthető csomagot (`.aab`) készít, ha később oda kerül az app.
+
 ## Fejlesztés
 
 ```
