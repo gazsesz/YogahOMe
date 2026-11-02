@@ -14,6 +14,10 @@ export interface Goal {
   benefits: Record<string, number>;
   /** Kategória-súlyok (álló, hátrahajlás, csípőnyitó…). */
   categories: Record<string, number>;
+  /** Erősített izomcsoport-súlyok (pose.strengthens). */
+  muscles?: Record<string, number>;
+  /** Nyújtott terület-súlyok (pose.stretches). */
+  stretches?: Record<string, number>;
   /** Ezeket a pózokat külön előnyben részesíti. */
   boostIds?: string[];
   /** Kizárt kategóriák (pl. migrénnél a fordított pózok). */
@@ -39,7 +43,7 @@ export interface Goal {
   /** A leghosszabb értelmes időtartam (pl. irodai mini: 30 perc). */
   maxMinutes?: number;
   /** Al-választó (erősítésnél izomcsoport). */
-  options?: { id: string; name: string; categories: Record<string, number>; boostIds?: string[]; warmSequences?: string[] }[];
+  options?: { id: string; name: string; categories: Record<string, number>; muscles?: Record<string, number>; boostIds?: string[]; warmSequences?: string[] }[];
 }
 
 export const GOALS: Goal[] = [
@@ -48,6 +52,7 @@ export const GOALS: Goal[] = [
     name: 'Reggeli ébresztő',
     short: 'Átmozgat, felfrissít, energiát ad a naphoz.',
     benefits: { allokepesseg: 2, sziv: 2, tudo: 2 },
+    stretches: { mellkas: 1, gerinc: 1, oldal: 1 },
     categories: { allo: 3, hatra: 2, csavar: 1, egyensuly: 1 },
     avoidCategories: ['yin'],
     warmSequences: ['surya-namaskara-hatha', 'surya-namaskara-a', 'alap-vinyasa'],
@@ -59,6 +64,7 @@ export const GOALS: Goal[] = [
     name: 'Derék, hát',
     short: 'Kíméletes mobilizálás és nyújtás derék- és hátfájásra.',
     benefits: { tartas: 3, hajlekonysag: 2 },
+    stretches: { agyek: 3, gerinc: 2, combhajlito: 1, csipo: 1 },
     categories: { pihen: 2, csipo: 2, csavar: 1, hatra: 1 },
     boostIds: ['marjaryasana', 'bitilasana', 'balasana', 'apanasana', 'sucirandhrasana', 'supta-padangusthasana', 'setu-bandha-sarvangasana', 'anahatasana'],
     avoidConditions: ['derek'],
@@ -75,6 +81,7 @@ export const GOALS: Goal[] = [
     name: 'Futás után',
     short: 'Vádli, comb és csípő lazítása edzés után.',
     benefits: { hajlekonysag: 3 },
+    stretches: { combhajlito: 3, vadli: 3, csipohajlito: 2, csipo: 2 },
     categories: { csipo: 3, elore: 2, yin: 2, pihen: 1, csavar: 1 },
     boostIds: ['anjaneyasana', 'ardha-hanumanasana', 'supta-padangusthasana', 'sucirandhrasana', 'adho-mukha-svanasana', 'parsvottanasana'],
     avoidCategories: ['kar', 'core'],
@@ -87,6 +94,7 @@ export const GOALS: Goal[] = [
     name: 'Ülő- és állómunka után',
     short: 'Mellkasnyitás, csípőhajlító-nyújtás, lábak pihentetése.',
     benefits: { tartas: 3, hajlekonysag: 2, sziv: 1 },
+    stretches: { csipohajlito: 3, mellkas: 3, vall: 1, vadli: 1 },
     categories: { hatra: 2, csipo: 2, elore: 1, csavar: 1, pihen: 1 },
     boostIds: ['anjaneyasana', 'anahatasana', 'bhujangasana', 'parsva-sukhasana', 'uttanasana', 'setu-bandha-sarvangasana'],
     warmSequences: ['macska-tehen', 'surya-namaskara-hatha'],
@@ -112,6 +120,7 @@ export const GOALS: Goal[] = [
     name: 'Fáradtság',
     short: 'Gyengéd mellkasnyitás és keringésélénkítés kimerültségre.',
     benefits: { sziv: 2, tudo: 2, hormon: 2 },
+    stretches: { mellkas: 2 },
     categories: { hatra: 2, allo: 1, pihen: 1, csavar: 1 },
     warmSequences: ['macska-tehen', 'kezdo-vinyasa'],
     openPranayama: 'nadi-shodhana',
@@ -123,6 +132,7 @@ export const GOALS: Goal[] = [
     name: 'Megfázás ellen',
     short: 'Mellkas- és légzésnyitó óra az immunrendszerért.',
     benefits: { immun: 3, tudo: 2 },
+    stretches: { mellkas: 2, gerinc: 1 },
     categories: { hatra: 2, csavar: 2, forditott: 1 },
     warmSequences: ['surya-namaskara-hatha', 'terdelo-napudvozlet'],
     openPranayama: 'ujjayi',
@@ -133,6 +143,7 @@ export const GOALS: Goal[] = [
     name: 'Menstruáció',
     short: 'Görcsoldó, támasztott pózok, hasi légzés.',
     benefits: { hormon: 3, emesztes: 1 },
+    stretches: { csipo: 2, agyek: 2 },
     categories: { csipo: 3, pihen: 3, yin: 2, ulo: 1 },
     boostIds: ['supta-baddha-konasana', 'baddha-konasana', 'balasana', 'salamba-balasana', 'marjaryasana', 'bitilasana', 'apanasana', 'pillango-yin'],
     avoidConditions: ['menstruacio'],
@@ -153,12 +164,12 @@ export const GOALS: Goal[] = [
     openPranayama: 'ujjayi',
     mult: [0.6, 1, 1.3, 0.8, 0.6],
     options: [
-      { id: 'egesz', name: 'Egész test', categories: { allo: 2, core: 2, kar: 1, hatra: 1, egyensuly: 1 } },
-      { id: 'core', name: 'Core (törzs)', categories: { core: 4, kar: 1 }, boostIds: ['phalakasana', 'navasana', 'ardha-navasana', 'vasisthasana', 'alkaros-oldalso-deszka'] },
-      { id: 'has', name: 'Hasizom', categories: { core: 4 }, boostIds: ['navasana', 'ardha-navasana', 'urdhva-prasarita-padasana', 'uttanapadasana', 'cakki-calanasana'] },
-      { id: 'hat', name: 'Hátizom', categories: { hatra: 4, core: 1 }, boostIds: ['salabhasana', 'bhujangasana', 'viparita-salabhasana', 'dhanurasana', 'ardha-purvottanasana'] },
-      { id: 'kar', name: 'Kar és váll', categories: { kar: 4, core: 1 }, boostIds: ['phalakasana', 'caturanga-dandasana', 'vasisthasana', 'ardha-pincha-mayurasana', 'purvottanasana'] },
-      { id: 'lab', name: 'Láb és far', categories: { allo: 4, egyensuly: 3 }, boostIds: ['utkatasana', 'virabhadrasana-ii', 'utkata-konasana', 'setu-bandha-sarvangasana', 'malasana'], warmSequences: ['szek-aramlas', 'istenno-csillag'] },
+      { id: 'egesz', name: 'Egész test', categories: { allo: 1, core: 1 }, muscles: { core: 1, lab: 1, kar: 1, hat: 1, far: 1, vall: 1 } },
+      { id: 'core', name: 'Core (törzs)', categories: { core: 2 }, muscles: { core: 3, has: 1 }, boostIds: ['phalakasana', 'navasana', 'ardha-navasana', 'vasisthasana', 'alkaros-oldalso-deszka'] },
+      { id: 'has', name: 'Hasizom', categories: { core: 2 }, muscles: { has: 4 }, boostIds: ['navasana', 'ardha-navasana', 'urdhva-prasarita-padasana', 'uttanapadasana', 'cakki-calanasana'] },
+      { id: 'hat', name: 'Hátizom', categories: { hatra: 2 }, muscles: { hat: 4 }, boostIds: ['salabhasana', 'bhujangasana', 'viparita-salabhasana', 'dhanurasana', 'ardha-purvottanasana'] },
+      { id: 'kar', name: 'Kar és váll', categories: { kar: 1, core: 1 }, muscles: { kar: 3, vall: 2 }, boostIds: ['phalakasana', 'caturanga-dandasana', 'vasisthasana', 'ardha-pincha-mayurasana', 'purvottanasana'] },
+      { id: 'lab', name: 'Láb és far', categories: { allo: 2, egyensuly: 1 }, muscles: { lab: 3, far: 2 }, boostIds: ['utkatasana', 'virabhadrasana-ii', 'utkata-konasana', 'setu-bandha-sarvangasana', 'malasana'], warmSequences: ['szek-aramlas', 'istenno-csillag'] },
     ],
   },
   {
@@ -188,6 +199,7 @@ export const GOALS: Goal[] = [
     name: 'Nyak, váll',
     short: 'Képernyő előtti feszülés oldása.',
     benefits: { tartas: 2 },
+    stretches: { vall: 3, mellkas: 2, nyak: 1, gerinc: 1 },
     categories: { ulo: 2, csavar: 1, hatra: 1 },
     boostIds: ['parsva-sukhasana', 'anahatasana', 'gomukhasana', 'marjaryasana', 'bitilasana', 'balasana', 'parivrtta-sukhasana'],
     avoidCategories: ['forditott', 'kar'],
@@ -213,6 +225,7 @@ export const GOALS: Goal[] = [
     name: 'Emésztés',
     short: 'Csavarok és hasmasszázs puffadásra.',
     benefits: { emesztes: 3 },
+    stretches: { gerinc: 2, agyek: 1 },
     categories: { csavar: 3, pihen: 2 },
     boostIds: ['apanasana', 'pavanamuktasana', 'supta-matsyendrasana', 'vajrasana', 'balasana'],
     avoidConditions: ['hasi'],
@@ -225,6 +238,7 @@ export const GOALS: Goal[] = [
     name: 'Csípőnyitás',
     short: 'Hajlékonyság a csípőnek és a combnak.',
     benefits: { hajlekonysag: 3 },
+    stretches: { csipo: 3, csipohajlito: 2 },
     categories: { csipo: 4, yin: 2 },
     warmSequences: ['csipo-nyito-aramlas', 'guggolo-aramlas'],
     openPranayama: 'ujjayi',
@@ -234,6 +248,7 @@ export const GOALS: Goal[] = [
     name: 'Egyensúly',
     short: 'Fókusz, stabilitás, bokaerő.',
     benefits: { elme: 1, allokepesseg: 1 },
+    muscles: { lab: 2, core: 1 },
     categories: { egyensuly: 4, allo: 2 },
     warmSequences: ['surya-namaskara-hatha'],
     openPranayama: 'sama-vritti',
@@ -243,6 +258,7 @@ export const GOALS: Goal[] = [
     name: 'Túra, kerékpár után',
     short: 'Csípőhajlító, comb és hát lazítása.',
     benefits: { hajlekonysag: 3 },
+    stretches: { csipohajlito: 3, combhajlito: 2, agyek: 1, vadli: 1 },
     categories: { csipo: 3, elore: 2, hatra: 1, pihen: 1 },
     boostIds: ['anjaneyasana', 'ardha-hanumanasana', 'sucirandhrasana', 'bhujangasana', 'supta-padangusthasana'],
     avoidCategories: ['kar', 'core'],

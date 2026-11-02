@@ -6,7 +6,7 @@ Otthoni jóga app átlagos felhasználóknak (React Native + Expo, TypeScript �
 
 - `src/app/` – az app képernyői (expo-router): Főoldal (Új óra, Kedvencek, Eddigi óráim), Új óra szűrés és generált változatok, Gyakorlattár (ászanák, sorozatok, légzés; a mudratár a haladó részben), közös adatlap, Óráim (órák, kedvencek, programok), óraszerkesztő.
 - `src/lib/` – adat, óratípusok (`goals.ts`), óragenerátor (`generator.ts`), szűrők, ellenjavallat-figyelmeztetések, figurarajzolás, mentés (SQLite), PDF.
-- `data/aszanak.json` – az ászanatár app-barát adatai (205 ászana, 12 kategória, irányzat-címkék, csakrák, öt elem, hatásterületek, lépések, ellenjavallatok, figura-szögek).
+- `data/aszanak.json` – az ászanatár app-barát adatai (205 ászana, 12 kategória, irányzat-címkék, csakrák, öt elem, hatásterületek, lépések, ellenjavallatok, figura-szögek; v6-tól gyakorlási mezők: oldalas, testhelyzet, erősített izmok, nyújtás, intenzitás, szakasz, kerülendő panaszok, ellenpóz, tartás – generátor: `scripts/adat/pozadat.py`).
 - `data/sorozatok.json` – 20 dinamikus sorozat (nap-, hold-, földüdvözlet, vinyásza, gyengéd áramlások) 5 kategóriában, lépésenként ászanával és légzéssel.
 - `data/mudrak.json`, `data/pranayamak.json` – 39 mudra és 22 pránájáma, 6–6 kategóriában (generátor: `scripts/adat/`).
 - `docs/aszanatar.html` – az ászanatár önálló, böngészőben megnyitható változata SVG figurákkal.

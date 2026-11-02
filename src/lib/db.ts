@@ -6,7 +6,7 @@ import type { Plan, Series } from './types';
 // formátum bővítése nem igényel táblamódosítást.
 
 export const DB_NAME = 'jogapp.db';
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 export async function migrate(db: SQLiteDatabase) {
   const row = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
@@ -31,6 +31,14 @@ export async function migrate(db: SQLiteDatabase) {
         data TEXT NOT NULL,
         created_at TEXT NOT NULL,
         updated_at TEXT NOT NULL
+      );
+    `);
+  }
+  if (v < 3) {
+    await db.execAsync(`
+      CREATE TABLE IF NOT EXISTS settings (
+        key TEXT PRIMARY KEY NOT NULL,
+        value TEXT NOT NULL
       );
     `);
   }
@@ -130,5 +138,21 @@ export function saveSeries(db: SQLiteDatabase, series: Series): Promise<Series> 
 export function deleteSeries(db: SQLiteDatabase, id: string): Promise<void> {
   return serial(async () => {
     await db.runAsync('DELETE FROM series WHERE id = ?', id);
+  });
+}
+
+// Beállítások (pl. a felelősségi nyilatkozat elfogadása): kulcs–érték párok.
+
+export async function getSetting(db: SQLiteDatabase, key: string): Promise<string | null> {
+  const row = await db.getFirstAsync<{ value: string }>('SELECT value FROM settings WHERE key = ?', key);
+  return row?.value ?? null;
+}
+
+export function setSetting(db: SQLiteDatabase, key: string, value: string): Promise<void> {
+  return serial(async () => {
+    await db.runAsync(
+      'INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value',
+      key, value,
+    );
   });
 }

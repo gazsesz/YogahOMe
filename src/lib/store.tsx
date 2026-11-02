@@ -8,11 +8,13 @@ export {
   deleteSeries,
   getPlan,
   getSeries,
+  getSetting,
   listPlans,
   listSeries,
   modifyPlan,
   savePlan,
   saveSeries,
+  setSetting,
 } from './db';
 
 export function StoreProvider({ children }: { children: ReactNode }) {
