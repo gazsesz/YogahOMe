@@ -5,6 +5,23 @@ A legfrissebb lépés van legfelül.
 
 ---
 
+## Yoga hOMe 3. lépés – Pontosabb pózadatok, felelősségi nyilatkozat (2026-11-02)
+
+**Gabor kérése:** a pózadatok pontosítása; első indításkor jelenjen meg egy figyelmeztetés a saját felelősségről.
+
+| Döntés | Miért |
+| --- | --- |
+| `data/aszanak.json` v6: minden ászana új mezőket kapott: `sided`, `position`, `strengthens`, `stretches`, `intensity` (1–5), `phases`, `avoidFor`, `counterpose`, `hold` | A generátor eddig becsült (kategória, azonosító); most szakmai besorolásból dolgozik. |
+| Az adatot a `scripts/adat/pozadat.py` írja (halmazok + szabályok, ismeretlen azonosítónál hibával áll meg) | Egy helyen, átláthatóan szerkeszthető; újrafuttatva ugyanazt adja. Mariann vagy Rea itt tudja majd átnézni. |
+| Izomcsoportok: core, has, hát, kar, váll, láb, far; nyújtás: combhajlító, csípőhajlító, csípő, ágyék, mellkas, váll, gerinc, vádli, oldal, comb, nyak | Az erősítő és a lazító óratípusok ezekre súlyoznak (pl. futás után: combhajlító, vádli). |
+| `avoidFor`: az ellenjavallat-szövegből felismert panaszok + szakmai szabályok: fejjel lefelé pózok (magas vérnyomás, szem, menstruáció, nyak, szív, várandósság), csuklóterhelés, térdterhelés, mély hátrahajlás (derék, nyak), erős hasizom és mély csavar (derék, hasi, menstruáció, várandósság), 4–5-ös intenzitás (szív, magas vérnyomás) | Biztonságosabb kizárás átlagfelhasználónak; a figyelmeztetések az óraszerkesztőben is ebből jönnek. |
+| Sorrend testhelyzet szerint: álló → kéztámasz → térdelő → hason → ülő → oldalt → háton | Kevesebb felállás-lefekvés, természetes ív. |
+| Ellenpóz az adatból (pl. sáska után gyermekpóz, vállállás után hal, csónak után híd), 3-as intenzitástól | Az eddigi „hátrahajlás után gyermekpóz” szabály általánosítása. Ha az időhöz igazításkor egy póz kimarad, az ellenpóza is vele megy. |
+| Erősítő órában a célzott izmot dolgoztató pózok 2 ismétléssel kerülnek be, a többiek hátrébb sorolódnak | Kezdő szinten kevés ilyen póz van; így is a választott testrészre esik a hangsúly (teszt: a fő rész legalább 60%-a célzott). |
+| **Felelősségi nyilatkozat** első indításkor, teljes képernyőn, „Elolvastam, elfogadom” gombbal; az elfogadás ideje elmentődik (`settings` tábla, séma v3; böngészőben localStorage). A főoldal alján újra elolvasható | Gabor kérése. A kulcs változatszámos (`disclaimer:v1`): ha a szöveg érdemben változik, újra el kell fogadni. Kiadás előtt érdemes jogásszal átnézetni. |
+
+---
+
 ## Yoga hOMe – Saját repó (2026-11-02)
 
 **Gabor kérése:** az app költözzön a saját `gazsesz/YogahOMe` repóba.

@@ -37,9 +37,31 @@ export interface Practice {
   elements: { primary: string; secondary: string[] };
 }
 
+export type Position = 'allo' | 'terdelo' | 'kez' | 'ulo' | 'hason' | 'haton' | 'oldal';
+export type Phase = 'bemelegites' | 'fo' | 'levezetes' | 'relaxacio';
+
 export interface Pose extends Practice {
   traditions: string[];
   figure: Figure;
+  // v6 gyakorlási mezők (scripts/adat/pozadat.py) az óragenerátorhoz.
+  /** Oldalanként végzendő. */
+  sided: boolean;
+  /** Testhelyzet (a sorrendhez: állótól a fekvésig). */
+  position: Position;
+  /** Erősített izomcsoportok: core, has, hat, kar, vall, lab, far. */
+  strengthens: string[];
+  /** Nyújtott területek: combhajlito, csipohajlito, csipo, agyek, mellkas, vall, gerinc, vadli, oldal, comb, nyak. */
+  stretches: string[];
+  /** Terhelés 1–5. */
+  intensity: number;
+  /** Hova illik az órában. */
+  phases: Phase[];
+  /** Panaszok (cautions.ts azonosítók), amelyeknél kerülendő. */
+  avoidFor: string[];
+  /** Javasolt ellenpóz. */
+  counterpose?: string;
+  /** Alap tartás. */
+  hold: { breaths: number; sec: number };
 }
 
 /** Mudra vagy pránájáma. */

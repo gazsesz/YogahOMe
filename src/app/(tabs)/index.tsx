@@ -125,6 +125,10 @@ export default function Home() {
       ) : (
         <Text style={st.empty}>Itt jelennek meg az óráid. Kezdd az „Új óra” gombbal.</Text>
       )}
+
+      <Pressable onPress={() => router.push('/nyilatkozat')} hitSlop={8} style={{ marginTop: 28 }} accessibilityRole="link">
+        <Text style={st.legal}>Felelősségi nyilatkozat</Text>
+      </Pressable>
     </ScrollView>
   );
 }
@@ -151,6 +155,7 @@ const st = StyleSheet.create({
   minText: { fontSize: 13, fontWeight: '700', color: C.accent },
   rowTitle: { fontSize: 15, fontWeight: '600', color: C.ink },
   rowMeta: { fontSize: 13, color: C.muted, marginTop: 2 },
+  legal: { color: C.muted, fontSize: 13, textAlign: 'center', textDecorationLine: 'underline' },
   starBtn: { minWidth: 36, minHeight: 36, alignItems: 'center', justifyContent: 'center' },
   star: { fontSize: 22, color: C.muted },
 });

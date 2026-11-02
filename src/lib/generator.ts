@@ -65,29 +65,12 @@ function rng(seed: number) {
   };
 }
 
-/** Sorrend: állótól a talajig (álló → egyensúly → kéz/fordított → törzs → hason → ülő/csípő → előrehajlás → yin → pihenő). */
-const POSITION: Record<string, number> = {
-  allo: 0, egyensuly: 1, forditott: 2, kar: 2, core: 3, hatra: 4, csipo: 5, ulo: 5, csavar: 6, elore: 6, yin: 7, pihen: 8,
-};
-const INTENSITY: Record<string, number> = { kar: 2, core: 1.5, forditott: 1.5, egyensuly: 1, allo: 0.5, hatra: 0.5 };
-const intensity = (p: Pose) => p.level + (INTENSITY[p.category] ?? 0);
-
-const WARM_IDS = new Set(['marjaryasana', 'bitilasana', 'adho-mukha-svanasana', 'balasana', 'apanasana', 'supta-padangusthasana']);
+/** Sorrend testhelyzet szerint: álló → kéztámasz → térdelő → hason → ülő → oldalt → háton. */
+const POSITION: Record<string, number> = { allo: 0, kez: 1, terdelo: 2, hason: 3, ulo: 4, oldal: 5, haton: 6 };
 const RELAX_ONLY = new Set(['savasana', 'advasana']);
-const NOT_SIDED = new Set([
-  'tadasana', 'urdhva-hastasana', 'utkatasana', 'utkata-konasana', 'utthita-tadasana', 'pranamasana', 'utthita-hasta-padasana',
-  'baddha-konasana', 'malasana', 'ananda-balasana', 'mandukasana', 'samakonasana', 'upavistha-konasana', 'prasarita-padottanasana',
-  'kati-cakrasana', 'jathara-parivartanasana', 'parivrtta-prasarita-padottanasana',
-]);
-const SIDED_CATS = new Set(['allo', 'egyensuly', 'csavar', 'csipo']);
 
-/** Oldalanként végzendő-e a póz (az adatban nincs ilyen mező, ezért becsüljük). */
-export function isSidedPose(p: Pose): boolean {
-  if (NOT_SIDED.has(p.id)) return false;
-  if (/eka-pada|janu|maricy|krauncasana|triang|ardha-baddha|parivrtta|parsva|vasisth|anjaneya|hanuman|kapota|gomukh|agnistambh|skandasana|sucirandhr|supta-padangusth|hattyu|sarkany|felpillango|szarvas|banan|cipofuzo|negyzet/.test(p.id))
-    return true;
-  return SIDED_CATS.has(p.category);
-}
+/** Oldalanként végzendő-e a póz (data/aszanak.json → sided). */
+export const isSidedPose = (p: Pose): boolean => p.sided;
 
 interface Ctx {
   goal: Goal;
@@ -98,6 +81,8 @@ interface Ctx {
   avoid: Set<string>;
   categories: Record<string, number>;
   boost: Set<string>;
+  muscles: Record<string, number>;
+  stretches: Record<string, number>;
   used: Set<string>;
 }
 
@@ -110,8 +95,8 @@ function allowed(ctx: Ctx, p: Practice, relaxPhase = false): boolean {
   return true;
 }
 
-function poseAllowed(ctx: Ctx, p: Pose): boolean {
-  if (!allowed(ctx, p)) return false;
+function poseAllowed(ctx: Ctx, p: Pose, relaxPhase = false): boolean {
+  if (!allowed(ctx, p, relaxPhase)) return false;
   if (ctx.goal.avoidCategories?.includes(p.category)) return false;
   if (ctx.goal.onlyCategories && !ctx.goal.onlyCategories.includes(p.category)) return false;
   return true;
@@ -122,23 +107,35 @@ function score(ctx: Ctx, p: Pose, phase: 'warm' | 'main' | 'cool'): number {
   for (const b of p.benefitAreas) s += ctx.goal.benefits[b] ?? 0;
   s += (ctx.categories[p.category] ?? 0) * 1.5;
   if (ctx.boost.has(p.id)) s += 4;
-  if (ctx.variant === 1) s += intensity(p) * 0.6;
-  if (ctx.variant === 2) s += (['pihen', 'yin', 'elore'].includes(p.category) ? 1.5 : 0) - intensity(p) * 0.6;
-  if (phase === 'warm') s -= intensity(p);
-  if (phase === 'cool') s -= intensity(p) * 1.5;
+  for (const m of p.strengthens) s += (ctx.muscles[m] ?? 0) * 1.5;
+  for (const t of p.stretches) s += ctx.stretches[t] ?? 0;
+  if (ctx.variant === 1) s += p.intensity * 0.6;
+  if (ctx.variant === 2) s += (['pihen', 'yin', 'elore'].includes(p.category) ? 1.5 : 0) - p.intensity * 0.6;
+  if (phase === 'warm') s -= p.intensity;
+  if (phase === 'cool') s -= p.intensity * 1.5;
+  // Erősítő célnál a célzott izmokat nem dolgoztató pózok hátrébb kerülnek.
+  if (phase === 'main' && Object.keys(ctx.muscles).length && !targets(ctx, p)) s -= 3;
   return s + ctx.rand() * 2.5;
 }
+
+/** A póz a kiválasztott izomcsoportok valamelyikét erősíti-e. */
+const targets = (ctx: Ctx, p: Pose) => p.strengthens.some((m) => (ctx.muscles[m] ?? 0) >= 2);
+/** Erősítő órában a célzott pózokat kétszer ismételjük (két sorozat), hogy kevés póz is elég terhelést adjon. */
+const repsFor = (ctx: Ctx, p: Pose, phase: 'warm' | 'main' | 'cool') =>
+  phase === 'main' && Object.keys(ctx.muscles).length && targets(ctx, p) ? 2 : 1;
 
 function slotMinutes(p: Pose, phase: 'warm' | 'main' | 'cool'): number {
   if (p.category === 'yin') return phase === 'cool' ? 2 : 3;
   if (p.category === 'pihen') return phase === 'cool' ? 1.5 : 2;
+  if (p.intensity >= 4) return isSidedPose(p) ? 1 : 0.75;
   return isSidedPose(p) ? 1.5 : 1;
 }
 
 function holdFor(p: Pose, phase: 'warm' | 'main' | 'cool'): string {
   if (p.category === 'yin' || p.category === 'pihen') return fmtMin(slotMinutes(p, phase));
-  if (phase === 'warm') return isSidedPose(p) ? '3–5 légzés oldalanként' : '3–5 légzés';
-  return isSidedPose(p) ? '5 légzés oldalanként' : '5–8 légzés';
+  const side = isSidedPose(p) ? ' oldalanként' : '';
+  const breaths = phase === 'warm' ? Math.min(p.hold.breaths, 5) : p.hold.breaths;
+  return breaths > 0 ? `${breaths} légzés${side}` : fmtMin(slotMinutes(p, phase));
 }
 
 function noteFor(ctx: Ctx, p: Practice): string {
@@ -147,7 +144,15 @@ function noteFor(ctx: Ctx, p: Practice): string {
 
 function poseItem(ctx: Ctx, p: Pose, phase: 'warm' | 'main' | 'cool'): PlanItem {
   ctx.used.add(p.id);
-  return { key: newId(), poseId: p.id, hold: holdFor(p, phase), sides: isSidedPose(p) ? 'mindket' : 'nincs', note: noteFor(ctx, p) };
+  const reps = repsFor(ctx, p, phase);
+  return {
+    key: newId(),
+    poseId: p.id,
+    hold: holdFor(p, phase),
+    sides: isSidedPose(p) ? 'mindket' : 'nincs',
+    note: noteFor(ctx, p),
+    ...(reps > 1 ? { reps } : {}),
+  };
 }
 
 function techniqueItem(ctx: Ctx, kind: Kind, p: Practice, hold: string, extra: Partial<PlanItem> = {}): PlanItem {
@@ -165,13 +170,13 @@ function fill(ctx: Ctx, pool: Pose[], minutes: number, phase: 'warm' | 'main' | 
   let t = 0;
   for (const { p } of ranked) {
     if (t >= minutes - 0.25) break;
-    const m = slotMinutes(p, phase);
+    const m = slotMinutes(p, phase) * repsFor(ctx, p, phase);
     if (out.length && t + m > minutes + 0.25) continue;
     out.push(p);
     ctx.used.add(p.id);
     t += m;
   }
-  return out.sort((a, b) => (POSITION[a.category] ?? 5) - (POSITION[b.category] ?? 5));
+  return out.sort((a, b) => (POSITION[a.position] ?? 4) - (POSITION[b.position] ?? 4));
 }
 
 function pickPranayama(ctx: Ctx): Practice | undefined {
@@ -200,6 +205,8 @@ export function generateClass(req: GenRequest, variant = 0, seed = 1): Plan {
     avoid: new Set([...(goal.avoidConditions ?? []), ...req.avoid]),
     categories: option?.categories ?? goal.categories,
     boost: new Set([...(goal.boostIds ?? []), ...(option?.boostIds ?? [])]),
+    muscles: option?.muscles ?? goal.muscles ?? {},
+    stretches: goal.stretches ?? {},
     used: new Set(),
   };
   const [rahMin, warmMin, mainMin, coolMin, relaxMin] = phaseMinutes(req.minutes, goal.mult, variant);
@@ -223,31 +230,31 @@ export function generateClass(req: GenRequest, variant = 0, seed = 1): Plan {
     warmLeft -= rounds * perRound;
   }
   if (warmLeft >= 0.75) {
-    const warmPool = pool.filter((p) => (p.level === 1 && ['allo', 'csipo', 'csavar'].includes(p.category)) || WARM_IDS.has(p.id));
+    const warmPool = pool.filter((p) => p.phases.includes('bemelegites'));
     fill(ctx, warmPool, warmLeft, 'warm').forEach((p) => warm.push(poseItem(ctx, p, 'warm')));
   }
 
   // 3. Fő rész: a célhoz legjobban illő pózok, állótól a talajig rendezve, hátrahajlás után ellenpózzal.
   const mainPool = pool.filter(
-    (p) => (p.category !== 'yin' || (ctx.categories.yin ?? 0) > 0) && (p.category !== 'pihen' || (ctx.categories.pihen ?? 0) >= 2),
+    (p) =>
+      (p.phases.includes('fo') && (p.category !== 'yin' || (ctx.categories.yin ?? 0) > 0)) ||
+      (p.category === 'pihen' && (ctx.categories.pihen ?? 0) >= 2),
   );
   const main = fill(ctx, mainPool, mainMin, 'main');
   const mainItems: PlanItem[] = [];
-  const backbends = main.filter((p) => p.category === 'hatra');
-  const lastBack = backbends.length ? main.lastIndexOf(backbends[backbends.length - 1]) : -1;
+  // Erősebb póz után (pl. hátrahajlás, fordított, csónak) az adat szerinti ellenpóz, ha még nem szerepelt.
   main.forEach((p, i) => {
     mainItems.push(poseItem(ctx, p, 'main'));
-    if (i === lastBack && (backbends.length >= 2 || p.level >= 2)) {
-      const child = POSE_BY_ID['balasana'];
-      if (child && !ctx.used.has('balasana') && poseAllowed(ctx, child)) {
-        const it = poseItem(ctx, child, 'main');
-        mainItems.push({ ...it, hold: '5 légzés', note: ['Ellenpóz a hátrahajlás után.', it.note].filter(Boolean).join(' ') });
-      }
+    const cp = p.counterpose ? POSE_BY_ID[p.counterpose] : undefined;
+    const next = main[i + 1];
+    if (cp && p.intensity >= 3 && !ctx.used.has(cp.id) && next?.id !== cp.id && poseAllowed(ctx, cp, true)) {
+      const it = poseItem(ctx, cp, 'main');
+      mainItems.push({ ...it, hold: '5 légzés', note: [`Ellenpóz (${p.hu} után).`, it.note].filter(Boolean).join(' ') });
     }
   });
 
   // 4. Levezetés: nyújtó, nyugtató pózok, a végén az óratípus záró pózai (pl. lábak a falon).
-  const coolPool = pool.filter((p) => ['elore', 'csavar', 'csipo', 'yin', 'pihen', 'ulo'].includes(p.category) && p.level === 1);
+  const coolPool = pool.filter((p) => p.phases.includes('levezetes'));
   const extraMin = extras.reduce((t, p) => t + slotMinutes(p, 'cool'), 0);
   const cool: PlanItem[] = fill(ctx, coolPool, Math.max(0.5, coolMin - extraMin), 'cool').map((p) => poseItem(ctx, p, 'cool'));
   extras.forEach((p) => cool.push(poseItem(ctx, p, 'cool')));
@@ -262,7 +269,10 @@ export function generateClass(req: GenRequest, variant = 0, seed = 1): Plan {
   while (mainItems.length > 2 && estimateMinutes({ sections: draft() } as Plan) > req.minutes + 1) {
     const idx = [...mainItems].reverse().findIndex((it) => !it.note.startsWith('Ellenpóz'));
     if (idx < 0) break;
-    mainItems.splice(mainItems.length - 1 - idx, 1);
+    const k = mainItems.length - 1 - idx;
+    mainItems.splice(k, 1);
+    // A hozzá tartozó ellenpóz (közvetlenül utána) is megy vele.
+    if (mainItems[k]?.note.startsWith('Ellenpóz')) mainItems.splice(k, 1);
   }
 
   const now = new Date().toISOString();
@@ -305,7 +315,7 @@ export function estimateMinutes(plan: Plan): number {
       const m = /^([\d,.]+) perc/.exec(it.hold);
       if (m) t += Number(m[1].replace(',', '.'));
       else if (it.kind === 'sequence') t += (it.reps ?? 1) * (it.sides === 'mindket' ? 2 : 1);
-      else t += it.sides === 'mindket' ? 1.5 : 1;
+      else t += (it.sides === 'mindket' ? 1.5 : 1) * (it.reps ?? 1);
     }
   return t;
 }

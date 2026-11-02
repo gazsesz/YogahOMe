@@ -72,3 +72,13 @@ export async function deleteSeries(_db: Db, id: string): Promise<void> {
   delete all[id];
   write(KEY.series, all);
 }
+
+const SETTINGS = 'jogapp:settings';
+export async function getSetting(_db: Db, key: string): Promise<string | null> {
+  return read<string>(SETTINGS)[key] ?? null;
+}
+export async function setSetting(_db: Db, key: string, value: string): Promise<void> {
+  const all = read<string>(SETTINGS);
+  all[key] = value;
+  write(SETTINGS, all);
+}

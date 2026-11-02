@@ -39,7 +39,10 @@ export const CONDITION_BY_ID = Object.fromEntries(CONDITIONS.map((c) => [c.id, c
 /** Azok a panaszok, amelyekre a gyakorlat ellenjavallata kitér. */
 export function poseConditions(p: Practice): string[] {
   const text = p.cautions.toLowerCase();
-  return CONDITIONS.filter((c) => c.pattern.test(text)).map((c) => c.id);
+  const found = CONDITIONS.filter((c) => c.pattern.test(text)).map((c) => c.id);
+  // Az ászanáknál az adat (avoidFor) szakmai szabályokkal is kiegészíti a szövegből felismert panaszokat.
+  const extra = (p as Practice & { avoidFor?: string[] }).avoidFor ?? [];
+  return [...new Set([...found, ...extra])];
 }
 
 export interface PlanWarning {

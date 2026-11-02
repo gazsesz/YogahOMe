@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "benefitAreas": [
   {
    "id": "sziv",
@@ -302,6 +302,22 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "alacsonyvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -353,6 +369,26 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "vall"
+   ],
+   "stretches": [
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -409,6 +445,26 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "terd",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -469,6 +525,27 @@
      "tuz",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -527,6 +604,26 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -583,6 +680,24 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "mellkas",
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -646,6 +761,27 @@
      "viz",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "combhajlito",
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "alacsonyvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -707,6 +843,25 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -766,6 +921,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -824,6 +998,28 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -881,6 +1077,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "vadli",
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "combh"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -937,6 +1152,27 @@
      "tuz",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -992,6 +1228,26 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1046,6 +1302,24 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1102,6 +1376,24 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1159,6 +1451,23 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "alacsonyvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1215,6 +1524,26 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "csipo",
+    "vall"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1272,6 +1601,31 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "hat",
+    "lab"
+   ],
+   "stretches": [
+    "comb",
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "nyak"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1326,6 +1680,24 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "core",
+    "lab"
+   ],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1383,6 +1755,27 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "core",
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "oldal"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1438,6 +1831,29 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "core",
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "magasvn",
+    "menstruacio",
+    "sziv",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -1494,6 +1910,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "core",
+    "far",
+    "hat",
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -1549,6 +1986,26 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1606,6 +2063,26 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek",
+    "szem"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -1661,6 +2138,25 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -1717,6 +2213,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -1773,6 +2288,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "vadli"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -1832,6 +2366,27 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "mellkas",
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "alacsonyvn",
+    "derek"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -1891,6 +2446,26 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "counterpose": "ardha-purvottanasana",
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -1950,6 +2525,25 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "counterpose": "ardha-purvottanasana",
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -2009,6 +2603,25 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipo"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "counterpose": "ardha-purvottanasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2068,6 +2681,24 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "counterpose": "ardha-purvottanasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2128,6 +2759,28 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2186,6 +2839,27 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2245,6 +2919,29 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "hat",
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2305,6 +3002,28 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "far",
+    "hat",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2366,6 +3085,33 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "far",
+    "hat"
+   ],
+   "stretches": [
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -2427,6 +3173,28 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "nyak"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2490,6 +3258,30 @@
      "eter",
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "far",
+    "hat",
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "counterpose": "apanasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2552,6 +3344,36 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "far",
+    "hat",
+    "kar",
+    "lab",
+    "vall"
+   ],
+   "stretches": [
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "vall"
+   ],
+   "counterpose": "apanasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -2614,6 +3436,25 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "mellkas",
+    "nyak"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "counterpose": "apanasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2670,6 +3511,33 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [
+    "hat",
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -2728,6 +3596,31 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "far",
+    "hat",
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas",
+    "vall"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2784,6 +3677,28 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "far",
+    "hat",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2840,6 +3755,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc",
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2895,6 +3829,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -2951,6 +3904,24 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "mellkas",
+    "vall"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3010,6 +3981,28 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "comb",
+    "csipohajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "boka",
+    "derek",
+    "nyak",
+    "terd"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3069,6 +4062,30 @@
      "viz",
      "eter"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo",
+    "csipohajlito"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terd",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -3130,6 +4147,27 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3188,6 +4226,26 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3247,6 +4305,24 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3303,6 +4379,32 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "core",
+    "far",
+    "has",
+    "lab"
+   ],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terd",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3358,6 +4460,26 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito",
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3418,6 +4540,26 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "csipo",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3474,6 +4616,24 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3532,6 +4692,28 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "has"
+   ],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3589,6 +4771,25 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "gerinc",
+    "oldal"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3647,6 +4848,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -3702,6 +4921,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3759,6 +4995,27 @@
      "fold",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -3814,6 +5071,30 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "agyek",
+    "csipo",
+    "vadli"
+   ],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -3874,6 +5155,26 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo",
+    "mellkas",
+    "vall"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3928,6 +5229,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -3981,6 +5299,26 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "far",
+    "lab"
+   ],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4034,6 +5372,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "csipo",
+    "csipohajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4093,6 +5449,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4149,6 +5522,27 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "nyak",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -4206,6 +5600,24 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -4261,6 +5673,24 @@
      "fold",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipohajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "combh"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4314,6 +5744,26 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipohajlito",
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -4369,6 +5819,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -4424,6 +5891,22 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4483,6 +5966,23 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4540,6 +6040,21 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "boka"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4596,6 +6111,21 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4654,6 +6184,21 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4710,6 +6255,22 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4764,6 +6325,24 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "comb"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "boka",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4818,6 +6397,22 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4877,6 +6472,21 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -4931,6 +6541,29 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -4982,6 +6615,28 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5038,6 +6693,29 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5094,6 +6772,28 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5151,6 +6851,28 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5206,6 +6928,31 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek",
+    "hasi",
+    "magasvn",
+    "menstruacio",
+    "sziv",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5260,6 +7007,26 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5313,6 +7080,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5369,6 +7157,27 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5423,6 +7232,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5478,6 +7308,28 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5532,6 +7384,27 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5587,6 +7460,26 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5641,6 +7534,27 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5697,6 +7611,31 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "core",
+    "has"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "setu-bandha-sarvangasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -5751,6 +7690,28 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "core",
+    "has"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "counterpose": "setu-bandha-sarvangasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5805,6 +7766,28 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "core",
+    "has"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "counterpose": "setu-bandha-sarvangasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5857,6 +7840,22 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5909,6 +7908,28 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [
+    "core",
+    "far",
+    "has",
+    "hat"
+   ],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -5968,6 +7989,32 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "combhajlito",
+    "vadli",
+    "vall"
+   ],
+   "intensity": 2,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "szem",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -6021,6 +8068,35 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "vall"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -6080,6 +8156,29 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "nyak"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "matsyasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -6142,6 +8241,31 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "gerinc",
+    "nyak"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "matsyasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -6200,6 +8324,29 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "nyak"
+   ],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "matsyasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6258,6 +8405,30 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6311,6 +8482,29 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6367,6 +8561,33 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6422,6 +8643,33 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6479,6 +8727,31 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -6536,6 +8809,26 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6595,6 +8888,23 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "derek",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6652,6 +8962,22 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6708,6 +9034,25 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6764,6 +9109,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6824,6 +9188,26 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "csipo",
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "boka",
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6882,6 +9266,23 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "szem",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -6935,6 +9336,22 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo"
+   ],
+   "avoidFor": [
+    "alacsonyvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -6989,6 +9406,26 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "vall"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7044,6 +9481,21 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7100,6 +9552,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7158,6 +9629,25 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "sziv",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -7213,6 +9703,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7270,6 +9779,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "combh",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -7323,6 +9853,25 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -7381,6 +9930,26 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "oldal"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -7436,6 +10005,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": true,
+   "position": "allo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "boka",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -7493,6 +10081,23 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "boka"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7552,6 +10157,21 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7609,6 +10229,24 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7664,6 +10302,23 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7720,6 +10375,23 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7778,6 +10450,25 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "gerinc"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7832,6 +10523,26 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "alacsonyvn",
+    "magasvn"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -7890,6 +10601,24 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "alacsonyvn",
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -7946,6 +10675,25 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8004,6 +10752,25 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "hason",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "comb"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8062,6 +10829,31 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "comb"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terd",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8123,6 +10915,31 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "comb",
+    "csipohajlito"
+   ],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terd"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8182,6 +10999,26 @@
      "fold",
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [
+    "far",
+    "hat",
+    "lab"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "counterpose": "apanasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8241,6 +11078,29 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "vall"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8301,6 +11161,30 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8362,6 +11246,31 @@
      "eter",
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [
+    "hat"
+   ],
+   "stretches": [
+    "comb",
+    "csipohajlito"
+   ],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terd"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8419,6 +11328,29 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "comb",
+    "csipohajlito"
+   ],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "magasvn",
+    "nyak",
+    "sziv",
+    "terd"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -8478,6 +11410,25 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8535,6 +11486,24 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "nyak",
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8592,6 +11561,26 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8648,6 +11637,23 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8703,6 +11709,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "bemelegites",
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8757,6 +11782,21 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "allo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8812,6 +11852,25 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": true,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "gerinc",
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8866,6 +11925,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipo"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8919,6 +11996,23 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -8974,6 +12068,23 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csipo"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9030,6 +12141,25 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "oldal",
+   "strengthens": [
+    "core",
+    "far",
+    "has"
+   ],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9083,6 +12213,23 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9140,6 +12287,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 8,
+    "sec": 45
    }
   },
   {
@@ -9195,6 +12360,22 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9250,6 +12431,22 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9310,6 +12507,24 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "szem"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9364,6 +12579,24 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9425,6 +12658,22 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9479,6 +12728,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9532,6 +12798,28 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9583,6 +12871,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9638,6 +12947,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9691,6 +13021,29 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9742,6 +13095,27 @@
    "elements": {
     "primary": "tuz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9801,6 +13175,28 @@
      "viz",
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "combh",
+    "csuklo",
+    "magasvn",
+    "sziv",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9857,6 +13253,26 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -9911,6 +13327,25 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "vall"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -9963,6 +13398,27 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "kar"
+   ],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "combh",
+    "csuklo",
+    "magasvn",
+    "sziv"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -10019,6 +13475,28 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [
+    "core",
+    "has"
+   ],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "hasi",
+    "menstruacio",
+    "terhes"
+   ],
+   "counterpose": "setu-bandha-sarvangasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10074,6 +13552,28 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [
+    "far",
+    "hat",
+    "vall"
+   ],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10128,6 +13628,26 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "core",
+    "has",
+    "kar",
+    "vall"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10185,6 +13705,25 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [
+    "core",
+    "has"
+   ],
+   "stretches": [],
+   "intensity": 3,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10239,6 +13778,28 @@
    "elements": {
     "primary": "viz",
     "secondary": []
+   },
+   "sided": true,
+   "position": "kez",
+   "strengthens": [
+    "kar",
+    "vall"
+   ],
+   "stretches": [
+    "combhajlito",
+    "vadli"
+   ],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "csuklo",
+    "szem"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10294,6 +13855,27 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "kez",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "balasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -10351,6 +13933,26 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 2,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 5,
+    "sec": 30
    }
   },
   {
@@ -10410,6 +14012,27 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 5,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "matsyasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -10466,6 +14089,27 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "counterpose": "matsyasana",
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -10526,6 +14170,26 @@
     "secondary": [
      "viz"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 4,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "menstruacio",
+    "nyak",
+    "szem",
+    "sziv",
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 3,
+    "sec": 20
    }
   },
   {
@@ -10579,6 +14243,25 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "oldal",
+    "vall"
+   ],
+   "intensity": 1,
+   "phases": [
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10634,6 +14317,24 @@
    "elements": {
     "primary": "levego",
     "secondary": []
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "agyek"
+   ],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10693,6 +14394,23 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10751,6 +14469,24 @@
     "secondary": [
      "eter"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10809,6 +14545,22 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10864,6 +14616,22 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes",
+    "relaxacio"
+   ],
+   "avoidFor": [
+    "terhes"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10920,6 +14688,19 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "oldal",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 0,
+    "sec": 90
    }
   },
   {
@@ -10980,6 +14761,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11038,6 +14837,25 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito",
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11094,6 +14912,25 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11151,6 +14988,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [
+    "csipohajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11207,6 +15062,24 @@
     "secondary": [
      "levego"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11265,6 +15138,24 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11324,6 +15215,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11383,6 +15291,23 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11442,6 +15367,26 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "comb",
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11501,6 +15446,25 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": false,
+   "position": "hason",
+   "strengthens": [],
+   "stretches": [
+    "comb",
+    "csipohajlito",
+    "mellkas"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "derek"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11559,6 +15523,26 @@
    "elements": {
     "primary": "eter",
     "secondary": []
+   },
+   "sided": false,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "agyek",
+    "combhajlito",
+    "gerinc"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo"
+   ],
+   "avoidFor": [
+    "magasvn",
+    "nyak"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11618,6 +15602,22 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": false,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "combhajlito"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11668,6 +15668,28 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [
+    "lab"
+   ],
+   "stretches": [
+    "csipo",
+    "vadli"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "boka",
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11718,6 +15740,22 @@
    "elements": {
     "primary": "fold",
     "secondary": []
+   },
+   "sided": false,
+   "position": "terdelo",
+   "strengthens": [],
+   "stretches": [],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "boka"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11778,6 +15816,23 @@
     "secondary": [
      "tuz"
     ]
+   },
+   "sided": true,
+   "position": "haton",
+   "strengthens": [],
+   "stretches": [
+    "gerinc",
+    "oldal"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   },
   {
@@ -11836,8 +15891,27 @@
     "secondary": [
      "fold"
     ]
+   },
+   "sided": true,
+   "position": "ulo",
+   "strengthens": [],
+   "stretches": [
+    "csipo"
+   ],
+   "intensity": 1,
+   "phases": [
+    "fo",
+    "levezetes"
+   ],
+   "avoidFor": [
+    "terd"
+   ],
+   "hold": {
+    "breaths": 0,
+    "sec": 180
    }
   }
  ],
- "elementsNote": "Az öt elem (pañca mahābhūta) az első öt csakrához kötődik: Föld–Mūlādhāra, Víz–Svādhiṣṭhāna, Tűz–Maṇipūra, Levegő–Anāhata, Éter–Viśuddha. Egy ászana elsődleges eleme az elsődleges csakrájáé; ha az a 6. vagy 7. csakra, akkor az első 1–5. másodlagos csakráé, ennek híján Éter. A másodlagos elemek a többi csakrából jönnek."
+ "elementsNote": "Az öt elem (pañca mahābhūta) az első öt csakrához kötődik: Föld–Mūlādhāra, Víz–Svādhiṣṭhāna, Tűz–Maṇipūra, Levegő–Anāhata, Éter–Viśuddha. Egy ászana elsődleges eleme az elsődleges csakrájáé; ha az a 6. vagy 7. csakra, akkor az első 1–5. másodlagos csakráé, ennek híján Éter. A másodlagos elemek a többi csakrából jönnek.",
+ "practiceNote": "v6: gyakorlási mezők az óragenerátorhoz (sided, position, strengthens, stretches, intensity, phases, avoidFor, counterpose, hold). Forrás: scripts/adat/pozadat.py."
 }

@@ -57,3 +57,32 @@ test('mentett óra illesztése a kéréshez', () => {
   assert.ok(!planMatches(p, { goal: 'reggeli', minutes: 45, level: 1, avoid: [] }));
   assert.ok(!planMatches(p, { goal: 'alvas', minutes: 20, level: 1, avoid: [] }));
 });
+
+test('v6 pózadat: minden ászanán megvannak a gyakorlási mezők, a hivatkozások érvényesek', async () => {
+  const { POSES, POSE_BY_ID } = await import('../src/lib/data');
+  const { CONDITION_BY_ID } = await import('../src/lib/cautions');
+  const positions = new Set(['allo', 'terdelo', 'kez', 'ulo', 'hason', 'haton', 'oldal']);
+  const muscles = new Set(['core', 'has', 'hat', 'kar', 'vall', 'lab', 'far']);
+  for (const p of POSES) {
+    assert.equal(typeof p.sided, 'boolean', p.id);
+    assert.ok(positions.has(p.position), `${p.id}: ${p.position}`);
+    assert.ok(p.intensity >= 1 && p.intensity <= 5, p.id);
+    assert.ok(p.phases.length > 0, `${p.id}: nincs szakasz`);
+    p.strengthens.forEach((m) => assert.ok(muscles.has(m), `${p.id}: ${m}`));
+    p.avoidFor.forEach((c) => assert.ok(CONDITION_BY_ID[c], `${p.id}: ${c}`));
+    if (p.counterpose) assert.ok(POSE_BY_ID[p.counterpose], `${p.id}: ${p.counterpose}`);
+    assert.ok(p.hold.breaths > 0 || p.hold.sec > 0, p.id);
+  }
+  for (const m of muscles) assert.ok(POSES.filter((p) => p.strengthens.includes(m)).length >= 10, `kevés póz erősíti: ${m}`);
+});
+
+test('erősítésnél a kiválasztott izomcsoportot erősítő pózok dominálnak a fő részben', async () => {
+  const { POSE_BY_ID } = await import('../src/lib/data');
+  const map: Record<string, string[]> = { core: ['core'], has: ['has'], hat: ['hat'], kar: ['kar', 'vall'], lab: ['lab', 'far'] };
+  for (const [opt, ms] of Object.entries(map)) {
+    const p = generateClass({ goal: 'erosites', option: opt, minutes: 30, level: 2, avoid: [] }, 0, 9);
+    const main = p.sections[2].items.filter((i) => !i.kind && !i.note.startsWith('Ellenpóz'));
+    const hits = main.filter((i) => POSE_BY_ID[i.poseId].strengthens.some((m) => ms.includes(m))).length;
+    assert.ok(hits / main.length >= 0.6, `${opt}: ${hits}/${main.length}`);
+  }
+});
